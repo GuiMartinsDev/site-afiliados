@@ -1,19 +1,17 @@
 .header-bg {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .header {
-  background-color: #d62929;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  width: 70px;
-  height: 70px;
+.logo img {
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  background-color: #6a2df8;
 }
 
 .header ul {

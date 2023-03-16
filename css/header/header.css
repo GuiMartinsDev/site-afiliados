@@ -1,0 +1,38 @@
+.header-bg {
+  background-color: white;
+}
+
+.header {
+  background-color: #d62929;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #6a2df8;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header ul a {
+  font-size: 1.3rem;
+  color: #ffffff;
+  background-color: #6a2df8;
+  padding: 7px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.header ul a:hover {
+  color: #6a2df8;
+  background-color: #ffffff;
+}

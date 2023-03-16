@@ -1,0 +1,38 @@
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  margin: 0 auto;
+}
+
+.introducao img {
+  border-radius: 4px;
+}
+
+.cursos-destaques h2 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.ebooks-destaques h2 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.cursos {
+  display: flex;
+  gap: 10px;
+}
+
+.curso {
+  max-width: 300px;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}

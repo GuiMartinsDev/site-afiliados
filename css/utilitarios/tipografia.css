@@ -1,0 +1,23 @@
+.font-g {
+  font: 600 4rem/1.125 "Roboto", sans-serif;
+}
+
+.font-g-mono {
+  font: 600 4rem/1.125 "Roboto Mono", sans-serif;
+}
+
+.font-m {
+  font: 500 2rem/1.125 "Roboto", sans-serif;
+}
+
+.font-m-mono {
+  font: 500 2rem/1.125 "Roboto Mono", sans-serif;
+}
+
+.font-p {
+  font: 400 1rem/1.125 "Roboto", sans-serif;
+}
+
+.font-p-mono {
+  font: 400 1rem/1.125 "Roboto Mono", sans-serif;
+}

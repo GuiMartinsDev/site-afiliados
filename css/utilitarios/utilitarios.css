@@ -1,5 +1,5 @@
 .container {
-  background-color: #fcf7f7;
+  background-color: var(--cor-secundaria);
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px;

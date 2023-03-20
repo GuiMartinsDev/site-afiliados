@@ -22,8 +22,8 @@
 
 .header ul a {
   font-size: 1.3rem;
-  color: #ffffff;
-  background-color: #6a2df8;
+  color: var(--branco);
+  background-color: var(--cor-primaria);
   padding: 7px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
@@ -31,6 +31,6 @@
 }
 
 .header ul a:hover {
-  color: #6a2df8;
-  background-color: #ffffff;
+  color: var(--cor-primaria);
+  background-color: var(--branco);
 }

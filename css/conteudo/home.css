@@ -37,6 +37,19 @@
   gap: 10px;
 }
 
-.detalhes-btn p {
+.curso p {
   display: none;
+}
+
+.curso.ativo p {
+  display: block;
+}
+
+.detalhes-btn {
+  padding: 7px 12px;
+  border: none;
+  background-color: var(--cor-primaria);
+  color: var(--branco);
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

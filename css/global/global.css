@@ -1,3 +1,9 @@
+:root {
+  --cor-primaria: #6a2df8;
+  --cor-secundaria: #fcf7f7;
+  --branco: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;

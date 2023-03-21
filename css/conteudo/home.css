@@ -37,12 +37,8 @@
   gap: 10px;
 }
 
-.curso p {
-  display: none;
-}
-
-.curso.ativo p {
-  display: block;
+.curso h3 {
+  text-align: center;
 }
 
 .detalhes-btn {
@@ -51,5 +47,15 @@
   background-color: var(--cor-primaria);
   color: var(--branco);
   border-radius: 4px;
+  cursor: pointer;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.detalhes-btn p {
+  display: none;
+  margin-top: 10px;
+}
+
+.detalhes-btn.ativo p {
+  display: block;
 }

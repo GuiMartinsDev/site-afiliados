@@ -47,23 +47,29 @@
 }
 
 .cursos {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 4rem;
 }
 
-.curso div {
+.curso {
+  max-width: 220px;
+}
+
+.curso h3 {
+  text-align: center;
+  height: 75px;
+}
+
+.div-curso {
   max-width: 300px;
   height: auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-}
-
-.curso h3 {
-  text-align: center;
-  height: 75px;
+  gap: 20px;
 }
 
 .detalhes-btn {
@@ -76,11 +82,15 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.detalhes-btn p {
+ .div-curso p {
   display: none;
   margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-.detalhes-btn.ativo p {
+.div-curso p.ativo {
   display: block;
 }
+
+

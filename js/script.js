@@ -1,13 +1,11 @@
-const botoesList = document.querySelectorAll(".detalhes-btn");
-console.log(botoesList);
-const botoesArray = [...botoesList];
-console.log(botoesArray);
+const botoesDetails = document.querySelectorAll(".detalhes-btn");
 
 function mostrarDetalhes(event) {
   const botao = event.currentTarget;
-  botao.classList.toggle("ativo");
-}
+  const details = botao.nextElementSibling;
+  details.classList.toggle('ativo');
+};
 
-botoesArray.forEach((botao) => {
+botoesDetails.forEach((botao) => {
   botao.addEventListener("click", mostrarDetalhes);
 });

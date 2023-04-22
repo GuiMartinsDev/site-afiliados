@@ -4,6 +4,7 @@
   align-items: center;
   gap: 4rem;
   margin: 0 auto;
+  padding-top: 160px;
 }
 
 .introducao h1 {
@@ -34,27 +35,29 @@
   border-radius: 4px;
 }
 
-.cursos-destaques h2 {
-  text-align: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
+.cursos-destaques {
+  padding-top: 110px;
 }
 
+.cursos-destaques h2,
 .ebooks-destaques h2 {
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .cursos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  max-width: 1200px;
+  overflow-x: auto;
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
   justify-items: center;
   gap: 4rem;
 }
 
 .curso {
-  max-width: 220px;
+  min-width: 210px;
 }
 
 .curso h3 {
@@ -73,24 +76,36 @@
 }
 
 .detalhes-btn {
+  width: 100%;
   padding: 7px 12px;
+  margin-bottom: 20px;
   border: none;
   background-color: var(--cor-primaria);
   color: var(--branco);
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
 }
 
- .div-curso p {
+.detalhes-btn:hover {
+  color: var(--cor-primaria);
+  background-color: var(--branco);
+}
+
+.detalhes-btn.active {
+  color: var(--cor-primaria);
+  background-color: var(--branco);
+}
+
+.div-curso p {
   display: none;
   margin-top: 10px;
+  margin-bottom: 40px;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .div-curso p.ativo {
   display: block;
 }
-
-

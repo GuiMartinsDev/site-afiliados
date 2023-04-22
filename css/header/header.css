@@ -1,16 +1,22 @@
 .header-bg {
-  background-color: #ffffff;
+  background-color: var(--cor-secundaria);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px 30px;
 }
 
 .logo img {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 

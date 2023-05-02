@@ -4,3 +4,9 @@
   text-align: center;
   margin-top: 100px;
 }
+
+.footer .redes {
+  background-color: rebeccapurple;
+  display: flex;
+  justify-content: space-around;
+}

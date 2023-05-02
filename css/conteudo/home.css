@@ -7,11 +7,16 @@
   padding-top: 160px;
 }
 
-.introducao h1 {
+.introducao-titulo {
   position: relative;
+  padding: 20px 0px;
 }
 
-.introducao h1::before {
+.introducao-titulo h1 {
+  margin-bottom: 20px;
+}
+
+.introducao-titulo::before {
   content: "";
   width: 50px;
   height: 20px;
@@ -21,7 +26,7 @@
   top: -40px;
 }
 
-.introducao h1::after {
+.introducao-titulo::after {
   content: "";
   width: 50px;
   height: 20px;
@@ -31,19 +36,21 @@
   bottom: -40px;
 }
 
-.introducao img {
+.introducao.img img {
   border-radius: 4px;
 }
 
-.cursos-destaques {
+.cursos-section {
   padding-top: 110px;
 }
 
-.cursos-destaques h2,
-.ebooks-destaques h2 {
+.cursos-section h2,
+.ebooks-section h2,
+.faq-section h2 {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
 .cursos {
@@ -104,8 +111,54 @@
   margin-bottom: 40px;
   font-size: 1.2rem;
   text-align: left;
+  animation: slideDown 0.5s forwards;
 }
 
 .div-curso p.ativo {
   display: block;
+}
+
+.js-accordion dt {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  max-width: max-content;
+}
+
+.js-accordion dt::before {
+  content: "";
+  width: 20px;
+  height: 8px;
+  background-color: var(--cor-primaria);
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.js-accordion dt.ativo::before {
+  transform: rotate(90deg);
+}
+
+.js-accordion dd {
+  display: none;
+  animation: slideDown 0.5s forwards;
+}
+
+.js-accordion dd.ativo {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0px;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 250px;
+  }
 }

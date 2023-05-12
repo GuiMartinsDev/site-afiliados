@@ -1,27 +1,27 @@
 .contato-img {
-  background-image: url(../../img/contato-img-2.jpg);
+  background: url(../../img/contato-img-2.jpg) no-repeat;
   background-position: center;
   max-width: 95%;
-  height: 700px;
+  height: 600px;
   margin-bottom: 20px;
   margin-top: 60px;
 }
 
 .footer-bg {
   background-color: var(--cor-secundaria);
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
 .footer {
   background-color: var(--cor-secundaria);
   padding: 20px;
-  min-height: 150px;
+  min-height: 170px;
   display: grid;
 }
 
 .footer .redes {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   justify-items: center;
 }
@@ -34,13 +34,13 @@
 }
 
 .redes a {
-  color: var(--cor-primaria);
+  color: var(--preto);
   transition: 0.4s;
 }
 
 .redes a img:hover {
-  width: 45px;
-  height: 45px;
+  width: 47px;
+  height: 47px;
   transition: 0.4s;
 }
 

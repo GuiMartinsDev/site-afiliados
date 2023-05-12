@@ -27,3 +27,35 @@ function addClassAtivo() {
 faqLista.forEach((dt) => {
   dt.addEventListener("click", addClassAtivo);
 });
+
+function initAnimacaoScroll() {
+  const sections = document.querySelectorAll(".js-scroll");
+  const footer = document.querySelector(".footer");
+  if (sections.length && footer) {
+    const windowMetade = window.innerHeight * 0.6;
+
+    function animaScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = sectionTop - windowMetade < 0;
+        if (isSectionVisible) {
+          section.classList.add("ativo");
+        } else {
+          section.classList.remove("ativo");
+        }
+      });
+      const footerTop = footer.getBoundingClientRect().top;
+      const isFooterVisible = footerTop - windowMetade < 130;
+      if (isFooterVisible) {
+        footer.classList.add("ativo");
+      } else {
+        footer.classList.remove("ativo");
+      }
+    }
+    animaScroll();
+  }
+
+  window.addEventListener("scroll", animaScroll);
+}
+
+initAnimacaoScroll();

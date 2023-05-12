@@ -16,6 +16,10 @@
   margin-bottom: 20px;
 }
 
+.introducao-titulo p {
+  line-height: 1.3;
+}
+
 .introducao-titulo::before {
   content: "";
   width: 50px;
@@ -61,7 +65,7 @@
   /* display: grid;
   grid-template-columns: repeat(4, 1fr); */
   justify-items: center;
-  gap: 4rem;
+  gap: 3.5rem;
 }
 
 .curso {

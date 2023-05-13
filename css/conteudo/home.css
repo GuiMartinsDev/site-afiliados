@@ -50,11 +50,14 @@
 
 .cursos-section h2,
 .ebooks-section h2,
-.faq-section h2,
 .contato-h2 {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.faq-section h2 {
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -62,6 +65,7 @@
   display: flex;
   max-width: 1200px;
   overflow-x: auto;
+  overflow-y: hidden;
   /* display: grid;
   grid-template-columns: repeat(4, 1fr); */
   justify-items: center;
@@ -70,6 +74,31 @@
 
 .curso {
   min-width: 210px;
+}
+
+.curso a {
+  position: relative;
+  display: flex;
+}
+
+.curso a::after {
+  content: "";
+  text-align: center;
+  width: 100%;
+  height: 0px;
+  background-color: var(--cor-primaria);
+  display: inline-block;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.curso a:hover::after {
+  content: "Ver curso";
+  font: 500 1rem/1.125 "Roboto", sans-serif;
+  color: var(--branco);
+  line-height: 40px;
+  height: 40px;
+  text-transform: uppercase;
 }
 
 .curso h3 {
@@ -170,5 +199,15 @@
   to {
     opacity: 1;
     max-height: 250px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao-img {
+    grid-row: 2;
   }
 }

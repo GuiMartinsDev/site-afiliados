@@ -1,12 +1,3 @@
-.contato-img {
-  background: url(../../img/contato-img-2.jpg) no-repeat;
-  background-position: center;
-  max-width: 95%;
-  height: 600px;
-  margin-bottom: 20px;
-  margin-top: 60px;
-}
-
 .footer-bg {
   background-color: var(--cor-secundaria);
   margin-top: 70px;

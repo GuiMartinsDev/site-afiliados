@@ -1,3 +1,12 @@
+.banner {
+  max-width: 100%;
+  height: 600px;
+  background: url(../../img/banner-afiliados.jpg) no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+  object-fit: contain;
+}
+
 .introducao {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -51,12 +60,14 @@
 .cursos-section h2,
 .ebooks-section h2,
 .contato-h2 {
+  color: var(--cor-primaria);
   text-align: center;
   margin-top: 30px;
   margin-bottom: 40px;
   text-transform: uppercase;
 }
 .faq-section h2 {
+  color: var(--cor-primaria);
   text-align: center;
   text-transform: uppercase;
 }
@@ -89,13 +100,13 @@
   background-color: var(--cor-primaria);
   display: inline-block;
   position: absolute;
+  color: var(--branco);
   transition: 0.4s;
 }
 
 .curso a:hover::after {
   content: "Ver curso";
   font: 500 1rem/1.125 "Roboto", sans-serif;
-  color: var(--branco);
   line-height: 40px;
   height: 40px;
   text-transform: uppercase;
@@ -114,6 +125,13 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+.preco {
+  color: #2b2b2b;
+  background-color: #bbb7b7;
+  border-radius: 4px;
+  padding: 4px;
 }
 
 .detalhes-btn {
@@ -154,7 +172,7 @@
 
 .faq-section {
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .js-accordion dt {
@@ -209,5 +227,30 @@
 
   .introducao-img {
     grid-row: 2;
+  }
+}
+
+@media (max-width: 800px) {
+  .curso {
+    min-width: 150px;
+  }
+
+  .faq-section dl dt {
+    font-size: 1.3rem;
+  }
+
+  .faq-section dl dd {
+    width: 30ch;
+    font-size: 1.1rem;
+  }
+  .js-accordion dt::before {
+    width: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .faq-section dl dd {
+    width: 22ch;
+    font-size: 1.1rem;
   }
 }

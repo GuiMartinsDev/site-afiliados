@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aprenda 4ever</title>
+  <title>MediaBooks Store</title>
   <link rel="icon" type="image/x-icon" href="/img/aqui-aprende.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +31,9 @@
   </header>
 
   <main>
+    <div class="banner">
+
+    </div>
     <section class="introducao js-scroll container">
       <div class="introducao-img">
         <img src="./img/profesora.jpg" alt="Imagem de uma profersora no notbook">
@@ -50,7 +53,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Manicure e Pedicure</h3>
-            <span class="font-m-2">R$: 59,00</span>
+            <span class="font-m-2 preco">R$: 59,00</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -64,7 +67,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso Os Segredos da Pascoa</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -78,7 +81,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Marketing</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -92,7 +95,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Marketing</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -106,7 +109,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Marketing</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -119,7 +122,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Violão</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -138,7 +141,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Manicure e Pedicure</h3>
-            <span class="font-m-2">R$: 59,00</span>
+            <span class="font-m-2 preco">R$: 59,00</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -152,7 +155,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso Os Segredos da Pascoa</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -166,7 +169,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Marketing</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -180,7 +183,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Marketing</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -194,7 +197,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Marketing</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -207,7 +210,7 @@
           </a>
           <div class="div-curso">
             <h3 class="font-m-2">Curso de Violão</h3>
-            <span class="font-m-2">R$: 19,90</span>
+            <span class="font-m-2 preco">R$: 19,90</span>
             <button class="detalhes-btn">
               <span class="font-m-2">Detalhes</span>
             </button>
@@ -231,8 +234,8 @@
       </dl>
     </section>
 
-    <div class="contato-img js-scroll container">
-      <img src="./img/contato-img-2.jpg" width="1200px" height="600px" alt="">
+    <div class="contato-section js-scroll container">
+      <img class="contato-img" src="./img/contato-img-2.jpg" width="1200px" height="600px" alt="">
       <h2 class="contato-h2 js-scroll font-m-mono">Contato</h2>
     </div>
 

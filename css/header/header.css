@@ -1,8 +1,13 @@
 .header-bg {
-  background-color: var(--cor-secundaria);
+  background-color: #ffffff00;
   position: fixed;
   width: 100%;
   z-index: 1;
+  transition: 0.3s;
+}
+
+.header-bg.solid {
+  background-color: var(--cor-primaria);
 }
 
 .header {
@@ -11,7 +16,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5px 30px;
+  padding: 10px 30px;
 }
 
 .logo img {
@@ -28,15 +33,15 @@
 
 .header ul a {
   font-size: 1.3rem;
-  color: var(--branco);
-  background-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+  background-color: var(--branco);
   padding: 7px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   transition: 0.4s;
 }
 
 .header ul a:hover {
-  color: var(--cor-primaria);
-  background-color: var(--branco);
+  color: var(--branco);
+  background-color: var(--cor-primaria);
 }

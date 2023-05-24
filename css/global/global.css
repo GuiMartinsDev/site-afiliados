@@ -1,10 +1,11 @@
 :root {
   /* --cor-primaria: #412df8; */
   /* --cor-primaria: #f7237b; */
-  --cor-primaria: #023661;
-  --cor-secundaria: #f0e7e7;
+  --cor-primaria: #1c84df;
+  --contraste-cp: #004fac;
+  --cor-secundaria: #f6f7f9;
   --branco: #ffffff;
-  --preto: #111111;
+  --preto: #1d1d1d;
 }
 
 * {
@@ -44,12 +45,12 @@ img {
 }
 
 .cursos::-webkit-scrollbar-thumb {
-  background-color: var(--cor-primaria); /* color of the scroll thumb */
+  background-color: var(--contraste-cp); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
 
 /* Works FireFox */
 .cursos {
   scrollbar-width: auto;
-  scrollbar-color: var(--cor-primaria) var(--cor-secundaria);
+  scrollbar-color: var(--contraste-cp) var(--cor-secundaria);
 }

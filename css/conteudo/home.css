@@ -5,6 +5,28 @@
   background-size: cover;
   background-position: 0 50%;
   object-fit: contain;
+  position: relative;
+}
+
+.banner-text {
+  text-align: center;
+  width: 100%;
+  /* background-color: greenyellow; */
+  padding: 100px;
+  height: 600px;
+}
+
+.banner-text-detalhe {
+  color: var(--cor-primaria);
+}
+
+.banner-text h2 {
+  color: var(--branco);
+  font-style: italic;
+  /* background-color: rebeccapurple; */
+  max-width: 100%;
+  padding: 10px;
+  margin-top: 80px;
 }
 
 .introducao {
@@ -21,11 +43,11 @@
   padding: 20px 0px;
 }
 
-.introducao-titulo h1 {
+.h2-intro {
   margin-bottom: 20px;
 }
 
-.introducao-titulo p {
+.p-intro {
   line-height: 1.3;
 }
 
@@ -60,14 +82,14 @@
 .cursos-section h2,
 .ebooks-section h2,
 .contato-h2 {
-  color: var(--cor-primaria);
+  color: var(--preto);
   text-align: center;
   margin-top: 30px;
   margin-bottom: 40px;
   text-transform: uppercase;
 }
 .faq-section h2 {
-  color: var(--cor-primaria);
+  color: var(--preto);
   text-align: center;
   text-transform: uppercase;
 }
@@ -119,6 +141,10 @@
 
 .div-curso {
   max-width: 300px;
+  background-color: var(--cor-secundaria);
+  margin-bottom: 10px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
   height: auto;
   padding: 10px;
   display: flex;
@@ -178,7 +204,7 @@
 .js-accordion dt {
   font-weight: bold;
   margin-bottom: 10px;
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   gap: 8px;

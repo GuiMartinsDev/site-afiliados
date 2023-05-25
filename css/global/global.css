@@ -1,8 +1,6 @@
 :root {
-  /* --cor-primaria: #412df8; */
-  /* --cor-primaria: #f7237b; */
-  --cor-primaria: #1c84df;
-  --contraste-cp: #004fac;
+  --cor-primaria: #27b958;
+  --contraste-cp: #035a00fb;
   --cor-secundaria: #f6f7f9;
   --branco: #ffffff;
   --preto: #1d1d1d;
@@ -45,7 +43,7 @@ img {
 }
 
 .cursos::-webkit-scrollbar-thumb {
-  background-color: var(--contraste-cp); /* color of the scroll thumb */
+  background-color: var(--cor-primaria); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
 

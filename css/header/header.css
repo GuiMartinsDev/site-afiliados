@@ -43,5 +43,5 @@
 
 .header ul a:hover {
   color: var(--branco);
-  background-color: var(--cor-primaria);
+  background-color: var(--contraste-cp);
 }

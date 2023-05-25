@@ -25,7 +25,7 @@
 }
 
 .redes a {
-  color: var(--branco);
+  color: var(--cor-secundaria);
   transition: 0.4s;
 }
 

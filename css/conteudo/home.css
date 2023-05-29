@@ -79,21 +79,6 @@
   padding-top: 110px;
 }
 
-.cursos-section h2,
-.ebooks-section h2,
-.contato-h2 {
-  color: var(--preto);
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-}
-.faq-section h2 {
-  color: var(--preto);
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .cursos {
   display: flex;
   max-width: 1200px;
@@ -166,7 +151,7 @@
   margin-bottom: 20px;
   border: none;
   background-color: var(--cor-primaria);
-  color: var(--contraste-cp);
+  color: var(--cor-secundaria);
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -232,6 +217,47 @@
 
 .js-accordion dd.ativo {
   display: block;
+}
+
+.contato-img {
+  max-width: 1000px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.contato-h2 {
+  color: var(--preto);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contatos {
+  width: max-content;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.contatos li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cursos-section h2,
+.ebooks-section h2 {
+  color: var(--preto);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.faq-section h2 {
+  color: var(--preto);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @keyframes slideDown {

@@ -1,5 +1,5 @@
 .header-bg {
-  background-color: #ffffff00;
+  background-color: var(--cor-primaria);
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -17,12 +17,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 30px;
-}
-
-.logo img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
 }
 
 .header ul {

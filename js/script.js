@@ -32,10 +32,10 @@ function initAnimacaoScroll() {
   const header = document.querySelector(".header-bg");
   const firstSection = document.querySelector(".introducao");
   const sections = document.querySelectorAll(".js-scroll");
-  const h2Footer = document.querySelector(".contato-h2");
+  const h2Contato = document.querySelector(".contato-h2");
   const footer = document.querySelector(".footer");
   if (sections.length && footer && header) {
-    const windowMetade = window.innerHeight * 0.6;
+    const windowMetade = window.innerHeight * 0.7;
 
     function animaScroll() {
       const firstSectionTop = firstSection.getBoundingClientRect().top;
@@ -55,13 +55,13 @@ function initAnimacaoScroll() {
           section.classList.remove("ativo");
         }
       });
-      const h2FooterTop = h2Footer.getBoundingClientRect().top;
-      const isFooterVisible = h2FooterTop - windowMetade < 200;
+      const h2FooterTop = h2Contato.getBoundingClientRect().top;
+      const isFooterVisible = h2FooterTop - windowMetade < 40;
       if (isFooterVisible) {
-        h2Footer.classList.add("ativo");
+        h2Contato.classList.add("ativo");
         footer.classList.add("ativo");
       } else {
-        h2Footer.classList.remove("ativo");
+        h2Contato.classList.remove("ativo");
         footer.classList.remove("ativo");
       }
     }

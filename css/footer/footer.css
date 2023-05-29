@@ -7,14 +7,36 @@
   background-color: var(--cor-primaria);
   padding: 20px;
   min-height: 170px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.blog {
+  color: var(--cor-secundaria);
+  font: 400 1.5rem/1.125 "Roboto", sans-serif;
+}
+
+.blog::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: var(--cor-secundaria);
+  margin-top: 2px;
+  transition: 0.4s;
+}
+
+.blog:hover::after {
+  width: 100%;
 }
 
 .footer .redes {
   display: flex;
-  justify-content: space-around;
+  gap: 70px;
   align-items: center;
-  justify-items: center;
+  margin-bottom: 10px;
 }
 
 .redes li a {
@@ -26,7 +48,12 @@
 
 .redes a {
   color: var(--cor-secundaria);
-  transition: 0.4s;
+  font-size: 0.9rem;
+}
+
+.footer h4 {
+  color: var(--cor-secundaria);
+  font: 1rem "Roboto", sans-serif;
 }
 
 @media (max-width: 600px) {

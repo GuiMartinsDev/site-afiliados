@@ -39,7 +39,6 @@ function initAnimacaoScroll() {
 
     function animaScroll() {
       const firstSectionTop = firstSection.getBoundingClientRect().top;
-      console.log(firstSectionTop);
       const headerSolid = firstSectionTop - 10 < 0;
       if (headerSolid) {
         header.classList.add("solid");
@@ -72,3 +71,24 @@ function initAnimacaoScroll() {
 }
 
 initAnimacaoScroll();
+
+// MENU HAMBURGUER
+
+const btnHamburguer = document.querySelector(".btn-mobile");
+const menuMobile = document.querySelector(".navegacao ul");
+const linksMob = document.querySelectorAll(".navegacao ul a");
+console.log(linksMob);
+
+function abrirMenu() {
+  menuMobile.classList.toggle("ativo");
+}
+
+btnHamburguer.addEventListener("click", abrirMenu);
+
+function removeMenu() {
+  menuMobile.classList.remove("ativo");
+}
+
+linksMob.forEach((link) => {
+  link.addEventListener("click", removeMenu);
+});

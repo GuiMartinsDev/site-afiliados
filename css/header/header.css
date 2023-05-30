@@ -19,13 +19,14 @@
   padding: 10px 30px;
 }
 
-.header ul {
+.navegacao ul {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-.header ul a {
+.navegacao ul a {
+  display: block;
   font-size: 1.3rem;
   color: var(--cor-primaria);
   background-color: var(--branco);
@@ -35,7 +36,90 @@
   transition: 0.4s;
 }
 
-.header ul a:hover {
+.navegacao ul a:hover {
   color: var(--branco);
   background-color: var(--contraste-cp);
+}
+
+.btn-mobile {
+  display: none;
+  padding: 5px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 3px;
+}
+
+.hamburguer {
+  display: block;
+  width: 25px;
+  color: white;
+  border-top: 2px solid white;
+}
+
+.hamburguer::before {
+  content: "";
+  display: block;
+  background: currentColor;
+  width: 25px;
+  height: 2px;
+  margin-top: 5px;
+}
+
+.hamburguer::after {
+  content: "";
+  display: block;
+  background: currentColor;
+  width: 25px;
+  height: 2px;
+  margin-top: 5px;
+}
+
+@media (max-width: 620px) {
+  .btn-mobile {
+    display: flex;
+  }
+
+  .navegacao ul {
+    display: none;
+    height: 0px;
+    animation: slideDownMenuMob 0.5s;
+  }
+
+  .navegacao ul.ativo {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 65vh);
+    animation: slideDownMenuMob 0.5s;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    background: var(--cor-primaria);
+  }
+
+  .navegacao ul a {
+    width: max-content;
+    margin-left: 20px;
+    margin-top: 10px;
+    background: none;
+    color: var(--branco);
+    box-shadow: none;
+  }
+
+  .navegacao ul a:hover {
+    color: var(--branco);
+    background: none;
+  }
+}
+
+@keyframes slideDownMenuMob {
+  from {
+    opacity: 0;
+    max-height: 0px;
+  }
+
+  to {
+    opacity: 1;
+    max-height: calc(100vh);
+  }
 }

@@ -43,7 +43,7 @@
   padding: 20px 0px;
 }
 
-.h2-intro {
+.h1-intro {
   margin-bottom: 20px;
 }
 
@@ -92,6 +92,7 @@
 
 .curso {
   min-width: 210px;
+  height: auto;
 }
 
 .curso a {
@@ -139,6 +140,7 @@
 }
 
 .preco {
+  display: inline-block;
   color: #2b2b2b;
   background-color: #bbb7b7;
   border-radius: 4px;
@@ -173,6 +175,7 @@
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: 1.2rem;
+  height: auto;
   text-align: left;
   animation: slideDown 0.5s forwards;
 }
@@ -220,9 +223,13 @@
 }
 
 .contato-img {
-  max-width: 1000px;
   padding: 30px;
   margin: 0 auto;
+}
+
+.contato-section {
+  display: flex;
+  flex-direction: column;
 }
 
 .contato-h2 {
@@ -234,14 +241,16 @@
 .contatos {
   width: max-content;
   display: flex;
+  flex-direction: column;
   gap: 40px;
   align-items: center;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .contatos li a {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }
@@ -282,9 +291,34 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 620px) {
+  .banner {
+    display: none;
+  }
+
+  .h1-intro {
+    font-size: 1.5rem;
+  }
+
+  .p-intro {
+    font-size: 1.2rem;
+  }
+
   .curso {
-    min-width: 150px;
+    min-width: 160px;
+  }
+
+  .div-curso h3 {
+    font-size: 1.2rem;
+  }
+
+  .div-curso p {
+    font-size: 1rem;
+  }
+
+  .detalhes-btn {
+    text-align: center;
+    font-size: 1rem;
   }
 
   .faq-section dl dt {
@@ -301,8 +335,41 @@
 }
 
 @media (max-width: 360px) {
+  .h1-intro {
+    font-size: 1.4rem;
+  }
+
+  .p-intro {
+    font-size: 1.1rem;
+  }
+
+  .curso {
+    min-width: 140px;
+    height: auto;
+  }
+
+  .div-curso p {
+    font-size: 0.9rem;
+    margin-top: -10px;
+  }
+
   .faq-section dl dd {
     width: 22ch;
     font-size: 1.1rem;
+  }
+
+  .cursos-section h2,
+  .ebooks-section h2 {
+    font-size: 1.5rem;
+  }
+  .faq-section h2 {
+    font-size: 1.5rem;
+  }
+  .contato-h2 {
+    font-size: 1.5rem;
+  }
+
+  .contatos li a {
+    font-size: 1rem;
   }
 }

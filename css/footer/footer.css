@@ -56,12 +56,6 @@
   font: 1rem "Roboto", sans-serif;
 }
 
-@media (max-width: 600px) {
-  .footer .redes {
-    flex-direction: column;
-    gap: 40px;
-  }
-}
 @media (max-width: 400px) {
   .contato-img {
     display: none;

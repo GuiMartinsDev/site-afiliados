@@ -32,6 +32,11 @@ img {
   height: auto;
 }
 
+span {
+  display: block;
+  text-align: center;
+}
+
 .cursos::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
   height: 8px;

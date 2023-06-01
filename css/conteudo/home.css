@@ -335,6 +335,14 @@
 }
 
 @media (max-width: 360px) {
+  .introducao {
+    padding-top: 125px;
+  }
+
+  .introducao-titulo {
+    padding: 0px;
+  }
+
   .h1-intro {
     font-size: 1.4rem;
   }
@@ -343,14 +351,38 @@
     font-size: 1.1rem;
   }
 
+  .cursos-section {
+    padding-top: 30px;
+  }
+
   .curso {
     min-width: 140px;
     height: auto;
   }
 
+  .div-curso {
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+
   .div-curso p {
     font-size: 0.9rem;
     margin-top: -10px;
+  }
+
+  .faq-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .js-accordion dt {
+    position: relative;
+  }
+
+  .js-accordion dt::before {
+    position: absolute;
+    left: -20px;
+    width: 15px;
   }
 
   .faq-section dl dd {

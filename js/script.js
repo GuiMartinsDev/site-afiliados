@@ -76,9 +76,26 @@ initAnimacaoScroll();
 
 const btnHamburguer = document.querySelector(".btn-mobile");
 const menuMobile = document.querySelector(".navegacao ul");
-const linksMob = document.querySelectorAll(".navegacao ul a");
-console.log(linksMob);
+const links = document.querySelectorAll(".navegacao ul a");
 
+function scrollToSection(event) {
+  event.preventDefault();
+  const href = event.currentTarget.getAttribute("href");
+  const section = document.querySelector(href);
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
+
+/*
+  const topo = section.offsetTop;
+  window.scrollTo({
+    top: topo,
+    behavior: "smooth",
+  });
+*/
 function abrirMenu() {
   menuMobile.classList.toggle("ativo");
 }
@@ -89,6 +106,8 @@ function removeMenu() {
   menuMobile.classList.remove("ativo");
 }
 
-linksMob.forEach((link) => {
-  link.addEventListener("click", removeMenu);
+links.forEach((link) => {
+  link.addEventListener("click", scrollToSection);
+  link.addEventListener("touchstart", scrollToSection);
+  link.addEventListener("touchstart", removeMenu);
 });

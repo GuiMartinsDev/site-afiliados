@@ -1,32 +1,45 @@
-const botoesDetails = document.querySelectorAll(".detalhes-btn");
+// MENU HAMBURGUER
 
-function mostrarDetalhes(event) {
-  const botao = event.currentTarget;
-  botao.classList.toggle("active");
-  const details = botao.nextElementSibling;
-  details.classList.toggle("ativo");
+const btnHamburguer = document.querySelector(".btn-mobile");
+const menuMobile = document.querySelector(".navegacao ul.mobile");
+
+function abrirMenu() {
+  menuMobile.classList.toggle("ativo");
+  btnHamburguer.classList.toggle("ativo");
 }
 
-botoesDetails.forEach((botao) => {
-  botao.addEventListener("click", mostrarDetalhes);
-});
+btnHamburguer.addEventListener("click", abrirMenu);
 
-const faqLista = document.querySelectorAll(".js-accordion dt");
-const ativo = "ativo";
+// Scroll Suave links internos
 
-if (faqLista.length) {
-  faqLista[0].classList.add(ativo);
-  faqLista[0].nextElementSibling.classList.add(ativo);
+function initScrollSuave() {
+  const links = document.querySelectorAll(".navegacao ul a");
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  function removeMenu() {
+    menuMobile.classList.remove("ativo");
+    btnHamburguer.classList.remove("ativo");
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+    link.addEventListener("touchstart", scrollToSection);
+    link.addEventListener("touchstart", removeMenu);
+  });
 }
+initScrollSuave();
 
-function addClassAtivo() {
-  this.classList.toggle(ativo);
-  this.nextElementSibling.classList.toggle(ativo);
-}
-
-faqLista.forEach((dt) => {
-  dt.addEventListener("click", addClassAtivo);
-});
+// Scroll Animado
 
 function initAnimacaoScroll() {
   const header = document.querySelector(".header-bg");
@@ -69,45 +82,45 @@ function initAnimacaoScroll() {
 
   window.addEventListener("scroll", animaScroll);
 }
-
 initAnimacaoScroll();
 
-// MENU HAMBURGUER
+function initDetalhesBtn() {
+  const botoesDetails = document.querySelectorAll(".detalhes-btn");
 
-const btnHamburguer = document.querySelector(".btn-mobile");
-const menuMobile = document.querySelector(".navegacao ul");
-const links = document.querySelectorAll(".navegacao ul a");
+  function mostrarDetalhes(event) {
+    if (event.type === "touchstart") {
+      event.preventDefault();
+    }
+    const botao = event.currentTarget;
+    botao.classList.toggle("active");
 
-function scrollToSection(event) {
-  event.preventDefault();
-  const href = event.currentTarget.getAttribute("href");
-  const section = document.querySelector(href);
+    const details = botao.nextElementSibling;
+    details.classList.toggle("ativo");
+  }
 
-  section.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+  botoesDetails.forEach((botao) => {
+    botao.addEventListener("click", mostrarDetalhes);
+    botao.addEventListener("touchstart", mostrarDetalhes);
   });
 }
+initDetalhesBtn();
 
-/*
-  const topo = section.offsetTop;
-  window.scrollTo({
-    top: topo,
-    behavior: "smooth",
+function initFaq() {
+  const faqLista = document.querySelectorAll(".js-accordion dt");
+  const ativo = "ativo";
+
+  if (faqLista.length) {
+    faqLista[0].classList.add(ativo);
+    faqLista[0].nextElementSibling.classList.add(ativo);
+  }
+
+  function addClassAtivo() {
+    this.classList.toggle(ativo);
+    this.nextElementSibling.classList.toggle(ativo);
+  }
+
+  faqLista.forEach((dt) => {
+    dt.addEventListener("click", addClassAtivo);
   });
-*/
-function abrirMenu() {
-  menuMobile.classList.toggle("ativo");
 }
-
-btnHamburguer.addEventListener("click", abrirMenu);
-
-function removeMenu() {
-  menuMobile.classList.remove("ativo");
-}
-
-links.forEach((link) => {
-  link.addEventListener("click", scrollToSection);
-  link.addEventListener("touchstart", scrollToSection);
-  link.addEventListener("touchstart", removeMenu);
-});
+initFaq();

@@ -79,7 +79,7 @@
   padding-top: 110px;
 }
 
-.cursos {
+.cursos-ebooks {
   display: flex;
   max-width: 1200px;
   overflow-x: auto;
@@ -90,17 +90,20 @@
   gap: 3.5rem;
 }
 
-.curso {
+.curso,
+.ebook {
   min-width: 210px;
   height: auto;
 }
 
-.curso a {
+.curso a,
+.ebook a {
   position: relative;
   display: flex;
 }
 
-.curso a::after {
+.curso a::after,
+.ebook a::after {
   content: "";
   text-align: center;
   width: 100%;
@@ -108,7 +111,7 @@
   background-color: var(--cor-primaria);
   display: inline-block;
   position: absolute;
-  color: var(--contraste-cp);
+  color: var(--cor-secundaria);
   transition: 0.4s;
 }
 
@@ -119,13 +122,21 @@
   height: 40px;
   text-transform: uppercase;
 }
+.ebook a:hover::after {
+  content: "Ver ebook";
+  font: 500 1rem/1.125 "Roboto", sans-serif;
+  line-height: 40px;
+  height: 40px;
+  text-transform: uppercase;
+}
 
-.curso h3 {
+.curso h3,
+.ebook h3 {
   text-align: center;
   height: 75px;
 }
 
-.div-curso {
+.curso-ebook-info {
   max-width: 300px;
   background-color: var(--cor-secundaria);
   margin-bottom: 20px;
@@ -147,30 +158,7 @@
   padding: 4px;
 }
 
-.detalhes-btn {
-  width: 100%;
-  padding: 7px 12px;
-  margin-bottom: 20px;
-  border: none;
-  background-color: var(--cor-primaria);
-  color: var(--cor-secundaria);
-  border-radius: 4px;
-  cursor: pointer;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: 0.4s;
-}
-
-.detalhes-btn:hover {
-  color: var(--cor-primaria);
-  background-color: var(--branco);
-}
-
-.detalhes-btn.active {
-  color: var(--cor-primaria);
-  background-color: var(--branco);
-}
-
-.div-curso p {
+.curso-ebook-info p {
   display: none;
   margin-top: 10px;
   margin-bottom: 40px;
@@ -180,7 +168,7 @@
   animation: slideDown 0.5s forwards;
 }
 
-.div-curso p.ativo {
+.curso-ebook-info p.ativo {
   display: block;
 }
 
@@ -304,16 +292,33 @@
     font-size: 1.2rem;
   }
 
-  .curso {
+  .curso,
+  .ebook {
     min-width: 160px;
   }
 
-  .div-curso h3 {
+  .curso-ebook-info h3 {
     font-size: 1.2rem;
   }
 
-  .div-curso p {
+  .curso-ebook-info p {
     font-size: 1rem;
+  }
+
+  .curso a::after {
+    content: "Ver curso";
+    font: 400 1rem/1.125 "Roboto", sans-serif;
+    line-height: 30px;
+    height: 30px;
+    text-transform: uppercase;
+  }
+
+  .ebook a::after {
+    content: "Ver ebook";
+    font: 400 1rem/1.125 "Roboto", sans-serif;
+    line-height: 30px;
+    height: 30px;
+    text-transform: uppercase;
   }
 
   .detalhes-btn {
@@ -360,12 +365,12 @@
     height: auto;
   }
 
-  .div-curso {
+  .curso-ebook-info {
     background-color: #ffffff;
     box-shadow: none;
   }
 
-  .div-curso p {
+  .curso-ebook-info p {
     font-size: 0.9rem;
     margin-top: -10px;
   }

@@ -19,13 +19,13 @@
   padding: 10px 30px;
 }
 
-.navegacao ul {
+.navegacao ul.desktop {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-.navegacao ul a {
+.navegacao ul.desktop a {
   display: block;
   font-size: 1.3rem;
   color: var(--cor-primaria);
@@ -36,7 +36,7 @@
   transition: 0.4s;
 }
 
-.navegacao ul a:hover {
+.navegacao ul.desktop a:hover {
   color: var(--branco);
   background-color: var(--contraste-cp);
 }
@@ -57,15 +57,7 @@
   border-top: 2px solid white;
 }
 
-.hamburguer::before {
-  content: "";
-  display: block;
-  background: currentColor;
-  width: 25px;
-  height: 2px;
-  margin-top: 5px;
-}
-
+.hamburguer::before,
 .hamburguer::after {
   content: "";
   display: block;
@@ -73,31 +65,54 @@
   width: 25px;
   height: 2px;
   margin-top: 5px;
+  transition: 0.4s;
+  position: relative;
 }
 
 @media (max-width: 620px) {
+  .navegacao ul.desktop {
+    display: none;
+  }
+
   .btn-mobile {
     display: flex;
   }
 
-  .navegacao ul {
-    display: none;
-    height: 0px;
-    animation: slideDownMenuMob 0.5s;
+  .btn-mobile.ativo {
+    .hamburguer {
+      border-top: transparent;
+    }
+
+    .hamburguer::before {
+      transform: rotate(135deg);
+    }
+
+    .hamburguer::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
   }
 
-  .navegacao ul.ativo {
+  .navegacao ul.mobile {
     display: block;
     width: 100%;
-    height: calc(100vh - 65vh);
-    animation: slideDownMenuMob 0.5s;
+    height: 0px;
+    background: var(--cor-primaria);
     position: absolute;
     top: 51px;
     left: 0;
-    background: var(--cor-primaria);
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.4s;
   }
 
-  .navegacao ul a {
+  .navegacao ul.mobile.ativo {
+    height: calc(100vh - 60vh);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  .navegacao ul.mobile a {
     width: max-content;
     margin-left: 20px;
     margin-top: 10px;
@@ -106,20 +121,8 @@
     box-shadow: none;
   }
 
-  .navegacao ul a:hover {
+  .navegacao ul.mobile a:hover {
     color: var(--branco);
     background: none;
-  }
-}
-
-@keyframes slideDownMenuMob {
-  from {
-    opacity: 0;
-    max-height: 0px;
-  }
-
-  to {
-    opacity: 1;
-    max-height: calc(100vh);
   }
 }

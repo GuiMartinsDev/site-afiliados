@@ -32,28 +32,23 @@ img {
   height: auto;
 }
 
-span {
-  display: block;
-  text-align: center;
-}
-
-.cursos::-webkit-scrollbar {
+.cursos-ebooks::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
   height: 8px;
 }
 
-.cursos::-webkit-scrollbar-track {
+.cursos-ebooks::-webkit-scrollbar-track {
   background: var(--cor-secundaria); /* color of the tracking area */
   border-radius: 20px;
 }
 
-.cursos::-webkit-scrollbar-thumb {
+.cursos-ebooks::-webkit-scrollbar-thumb {
   background-color: var(--cor-primaria); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
 
 /* Works FireFox */
-.cursos {
+.cursos-ebooks {
   scrollbar-width: auto;
   scrollbar-color: var(--contraste-cp) var(--cor-secundaria);
 }

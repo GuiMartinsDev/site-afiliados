@@ -1,6 +1,8 @@
 :root {
-  --cor-primaria: #27b958;
-  --contraste-cp: #035a00fb;
+  /* --cor-primaria: #27b958;
+  --contraste-cp: #035a00fb; */
+  --cor-primaria: #f05011;
+  --contraste-cp: #963914;
   --cor-secundaria: #f6f7f9;
   --branco: #ffffff;
   --preto: #1d1d1d;

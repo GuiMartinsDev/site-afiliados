@@ -63,18 +63,13 @@ function initAnimacaoScroll() {
         const isSectionVisible = sectionTop - windowMetade < 0;
         if (isSectionVisible) {
           section.classList.add("ativo");
-        } else {
-          section.classList.remove("ativo");
         }
       });
-      const h2FooterTop = h2Contato.getBoundingClientRect().top;
-      const isFooterVisible = h2FooterTop - windowMetade < 40;
+      const contatoTop = h2Contato.getBoundingClientRect().top;
+      const isFooterVisible = contatoTop - windowMetade < 0;
       if (isFooterVisible) {
         h2Contato.classList.add("ativo");
         footer.classList.add("ativo");
-      } else {
-        h2Contato.classList.remove("ativo");
-        footer.classList.remove("ativo");
       }
     }
     animaScroll();

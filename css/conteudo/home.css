@@ -115,21 +115,6 @@
   transition: 0.4s;
 }
 
-.curso a:hover::after {
-  content: "Ver curso";
-  font: 500 1rem/1.125 "Roboto", sans-serif;
-  line-height: 40px;
-  height: 40px;
-  text-transform: uppercase;
-}
-.ebook a:hover::after {
-  content: "Ver ebook";
-  font: 500 1rem/1.125 "Roboto", sans-serif;
-  line-height: 40px;
-  height: 40px;
-  text-transform: uppercase;
-}
-
 .curso h3,
 .ebook h3 {
   text-align: center;
@@ -269,13 +254,46 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 900px) {
+  .curso a:hover::after {
+    content: "Ver curso";
+    font: 500 1rem/1.125 "Roboto", sans-serif;
+    line-height: 40px;
+    height: 40px;
+    text-transform: uppercase;
+  }
+  .ebook a:hover::after {
+    content: "Ver ebook";
+    font: 500 1rem/1.125 "Roboto", sans-serif;
+    line-height: 40px;
+    height: 40px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 900px) {
   .introducao {
     grid-template-columns: 1fr;
   }
 
   .introducao-img {
     grid-row: 2;
+  }
+
+  .curso a::after {
+    content: "Ver curso";
+    font: 400 1rem/1.125 "Roboto", sans-serif;
+    line-height: 30px;
+    height: 30px;
+    text-transform: uppercase;
+  }
+
+  .ebook a::after {
+    content: "Ver ebook";
+    font: 400 1rem/1.125 "Roboto", sans-serif;
+    line-height: 30px;
+    height: 30px;
+    text-transform: uppercase;
   }
 }
 
@@ -327,12 +345,12 @@
   }
 
   .faq-section dl dt {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .faq-section dl dd {
     width: 30ch;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .js-accordion dt::before {
     width: 10px;
@@ -358,11 +376,6 @@
 
   .cursos-section {
     padding-top: 30px;
-  }
-
-  .curso {
-    min-width: 140px;
-    height: auto;
   }
 
   .curso-ebook-info {

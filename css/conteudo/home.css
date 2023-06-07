@@ -84,10 +84,28 @@
   max-width: 1200px;
   overflow-x: auto;
   overflow-y: hidden;
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr); */
+  scroll-behavior: smooth;
   justify-items: center;
   gap: 3.5rem;
+}
+
+.btns-scroll {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: max-content;
+  /* background-color: rebeccapurple; */
+  margin: 20px auto;
+}
+
+#btn-voltar-ebooks,
+#btn-avancar-ebooks,
+#btn-voltar-cursos,
+#btn-avancar-cursos {
+  display: block;
+  font: 200 1.2rem/1.125 "Roboto", sans-serif;
+  color: var(--contraste-cp);
+  cursor: pointer;
 }
 
 .curso,
@@ -108,7 +126,13 @@
   text-align: center;
   width: 100%;
   height: 0px;
-  background-color: var(--cor-primaria);
+  background: linear-gradient(
+    90deg,
+    rgba(158, 17, 240, 1) 0%,
+    rgba(78, 12, 116, 1) 50%,
+    rgba(61, 11, 90, 1) 100%,
+    rgba(86, 12, 128, 1) 100%
+  );
   display: inline-block;
   position: absolute;
   color: var(--cor-secundaria);
@@ -342,6 +366,10 @@
   .detalhes-btn {
     text-align: center;
     font-size: 1rem;
+  }
+
+  .btns-scroll {
+    display: none;
   }
 
   .faq-section dl dt {

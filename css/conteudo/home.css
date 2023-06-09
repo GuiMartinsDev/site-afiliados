@@ -77,6 +77,11 @@
 
 .cursos-section {
   padding-top: 110px;
+  position: relative;
+}
+
+.ebooks-section {
+  position: relative;
 }
 
 .cursos-ebooks {
@@ -89,13 +94,47 @@
   gap: 3.5rem;
 }
 
-.btns-scroll {
+.btns-scroll-cursos,
+.btns-scroll-ebooks {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  width: max-content;
-  /* background-color: rebeccapurple; */
-  margin: 20px auto;
+  width: 1250px;
+  /* background-color: rgb(138, 153, 51); */
+  z-index: -999;
+}
+
+.btns-scroll-cursos {
+  position: absolute;
+  bottom: 380px;
+  left: -25px;
+}
+
+.btns-scroll-ebooks {
+  position: absolute;
+  bottom: 380px;
+  left: -25px;
+}
+
+@media (max-width: 1270px) {
+  .btns-scroll-cursos,
+  .btns-scroll-ebooks {
+    width: 200px;
+    /* background-color: rgb(153, 88, 51); */
+    margin: 20px auto;
+    z-index: 0;
+  }
+  .btns-scroll-cursos {
+    position: initial;
+    bottom: 380px;
+    left: -25px;
+  }
+
+  .btns-scroll-ebooks {
+    position: initial;
+    bottom: 380px;
+    left: -25px;
+  }
 }
 
 #btn-voltar-ebooks,
@@ -103,8 +142,6 @@
 #btn-voltar-cursos,
 #btn-avancar-cursos {
   display: block;
-  font: 200 1.2rem/1.125 "Roboto", sans-serif;
-  color: var(--contraste-cp);
   cursor: pointer;
 }
 
@@ -368,7 +405,8 @@
     font-size: 1rem;
   }
 
-  .btns-scroll {
+  .btns-scroll-cursos,
+  .btns-scroll-ebooks {
     display: none;
   }
 

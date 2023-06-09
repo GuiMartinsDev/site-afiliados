@@ -1,6 +1,6 @@
 :root {
-  --cor-primaria: #9e11f0;
-  --contraste-cp: #3d0b5a;
+  --cor-primaria: #9013d8;
+  --contraste-cp: #2f004b;
   --cor-secundaria: #f6f7f9;
   --branco: #ffffff;
   --preto: #1d1d1d;
@@ -40,15 +40,18 @@ img {
 .cursos-ebooks::-webkit-scrollbar-track {
   background: var(--cor-secundaria); /* color of the tracking area */
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .cursos-ebooks::-webkit-scrollbar-thumb {
   background-color: var(--cor-primaria); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
+  cursor: pointer;
 }
 
 /* Works FireFox */
 .cursos-ebooks {
   scrollbar-width: auto;
   scrollbar-color: var(--contraste-cp) var(--cor-secundaria);
+  cursor: pointer;
 }

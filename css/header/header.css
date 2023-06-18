@@ -27,6 +27,7 @@
 .navegacao ul.desktop a {
   display: block;
   font-size: 1.35rem;
+  font-weight: 500;
   color: var(--cor-primaria);
   /* background: var(--cor-primaria);
   border-radius: 7px; */
@@ -44,6 +45,7 @@
 .header-bg.solid .navegacao ul.desktop a {
   display: block;
   font-size: 1.3rem;
+  font-weight: 400;
   color: var(--cor-secundaria);
   background: transparent;
   padding: 7px;

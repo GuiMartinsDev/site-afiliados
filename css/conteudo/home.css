@@ -100,7 +100,6 @@
   justify-content: space-between;
   align-items: center;
   width: 1250px;
-  /* background-color: rgb(138, 153, 51); */
   z-index: -999;
 }
 
@@ -163,13 +162,7 @@
   text-align: center;
   width: 100%;
   height: 0px;
-  background: linear-gradient(
-    90deg,
-    rgba(158, 17, 240, 1) 0%,
-    rgba(78, 12, 116, 1) 50%,
-    rgba(61, 11, 90, 1) 100%,
-    rgba(86, 12, 128, 1) 100%
-  );
+  background: var(--cor-primaria);
   display: inline-block;
   position: absolute;
   color: var(--cor-secundaria);

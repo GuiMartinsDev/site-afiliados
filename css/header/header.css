@@ -38,7 +38,6 @@
 }
 
 .navegacao ul.desktop a:hover {
-  /* background: var(--branco); */
   color: var(--contraste-cp);
 }
 
@@ -53,7 +52,6 @@
 }
 
 .header-bg.solid .navegacao ul.desktop a:hover {
-  background: transparent;
   color: var(--contraste-cp);
 }
 
@@ -90,6 +88,10 @@
     display: none;
   }
 
+  .header-bg.solid .navegacao ul.mobile a {
+    font-size: 1.2rem;
+  }
+
   .btn-mobile {
     display: flex;
   }
@@ -123,7 +125,7 @@
   }
 
   .navegacao ul.mobile.ativo {
-    height: calc(100vh - 65vh);
+    height: calc(100vh - 66vh);
     visibility: visible;
     overflow-y: auto;
   }

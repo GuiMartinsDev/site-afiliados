@@ -44,16 +44,14 @@ initScrollSuave();
 function initAnimacaoScroll() {
   const header = document.querySelector(".header-bg");
   const firstSection = document.querySelector(".introducao");
-  const sections = document.querySelectorAll(".js-scroll");
-  const h2Contato = document.querySelector(".contato-h2");
-  const footer = document.querySelector(".footer");
-  if (sections.length && footer && header) {
+  const sections = document.querySelectorAll("[data-section='content']");
+  if (sections.length && header) {
     const windowMetade = window.innerHeight * 0.7;
 
     function animaScroll() {
       const firstSectionTop = firstSection.getBoundingClientRect().top;
       const headerSolid = firstSectionTop - 10 < 0;
-      if (headerSolid) {
+      if (headerSolid || window.innerWidth < 720) {
         header.classList.add("solid");
       } else {
         header.classList.remove("solid");
@@ -61,16 +59,17 @@ function initAnimacaoScroll() {
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
         const isSectionVisible = sectionTop - windowMetade < 0;
+        const direcao = section.dataset.anima;
         if (isSectionVisible) {
-          section.classList.add("ativo");
+          section.classList.add("ativo", direcao);
         }
       });
-      const contatoTop = h2Contato.getBoundingClientRect().top;
-      const isFooterVisible = contatoTop - windowMetade < 0;
-      if (isFooterVisible) {
-        h2Contato.classList.add("ativo");
-        footer.classList.add("ativo");
-      }
+      // const footerTop = footer.getBoundingClientRect().top;
+      // const isFooterVisible = footerTop - windowMetade < 0;
+      // if (isFooterVisible) {
+      //   // footer.classList.add("ativo");
+      //   footer.classList.add("ativo");
+      // }
     }
     animaScroll();
   }
@@ -135,7 +134,7 @@ function initDetalhesBtn() {
 initDetalhesBtn();
 
 function initFaq() {
-  const faqLista = document.querySelectorAll(".js-accordion dt");
+  const faqLista = document.querySelectorAll("[data-anime='accordion'] dt");
   const ativo = "ativo";
 
   if (faqLista.length) {

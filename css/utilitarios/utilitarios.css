@@ -23,11 +23,6 @@
   background: var(--branco);
 }
 
-.detalhes-btn.active {
-  color: var(--cor-primaria);
-  background: var(--branco);
-}
-
 [data-section="content"] {
   opacity: 0;
 }

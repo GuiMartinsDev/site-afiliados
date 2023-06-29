@@ -195,18 +195,18 @@
   padding: 4px;
 }
 
-.curso-ebook-info p {
+.cursos-ebooks p {
   display: none;
+}
+
+[data-detalhes="paragrafo"] {
+  display: block;
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: 1.2rem;
   height: auto;
   text-align: left;
-  animation: slideDown 0.5s forwards;
-}
-
-.curso-ebook-info p.ativo {
-  display: block;
+  /* animation: slideDown 0.5s forwards; */
 }
 
 .faq-section {

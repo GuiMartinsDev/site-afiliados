@@ -1,5 +1,7 @@
+import { btnHamburguer, menuMobile } from "./menu-hamburguer.js";
+
 export default function initScrollSuave() {
-  const links = document.querySelectorAll(".navegacao ul a");
+  const links = document.querySelectorAll("[data-links='menu']");
 
   function scrollToSection(event) {
     event.preventDefault();

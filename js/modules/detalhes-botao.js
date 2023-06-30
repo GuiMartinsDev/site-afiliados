@@ -19,7 +19,9 @@ export default function initDetalhesBtn() {
     txt.dataset.detalhes = "paragrafo";
     txt.classList.add("font-p");
     modalDetalhes.appendChild(txt);
-    modalContainer.classList.add("ativo");
+    setTimeout(() => {
+      modalContainer.classList.add("ativo");
+    }, 300);
   }
 
   function fecharDetalhes(event) {

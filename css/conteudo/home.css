@@ -194,8 +194,10 @@
   border-radius: 4px;
   padding: 4px;
 }
-
 .cursos-ebooks p {
+  display: none;
+}
+.cursos-ebooks .div-detalhes {
   display: none;
 }
 
@@ -307,15 +309,9 @@
 }
 
 @media (min-width: 900px) {
-  .curso a:hover::after {
-    content: "Ver curso";
-    font: 500 1rem/1.125 "Roboto", sans-serif;
-    line-height: 40px;
-    height: 40px;
-    text-transform: uppercase;
-  }
+  .curso a:hover::after,
   .ebook a:hover::after {
-    content: "Ver ebook";
+    content: "Saiba Mais";
     font: 500 1rem/1.125 "Roboto", sans-serif;
     line-height: 40px;
     height: 40px;
@@ -332,16 +328,9 @@
     grid-row: 2;
   }
 
-  .curso a::after {
-    content: "Ver curso";
-    font: 400 1rem/1.125 "Roboto", sans-serif;
-    line-height: 30px;
-    height: 30px;
-    text-transform: uppercase;
-  }
-
+  .curso a::after,
   .ebook a::after {
-    content: "Ver ebook";
+    content: "Saiba Mais";
     font: 400 1rem/1.125 "Roboto", sans-serif;
     line-height: 30px;
     height: 30px;
@@ -373,22 +362,6 @@
 
   .curso-ebook-info p {
     font-size: 1rem;
-  }
-
-  .curso a::after {
-    content: "Ver curso";
-    font: 400 1rem/1.125 "Roboto", sans-serif;
-    line-height: 30px;
-    height: 30px;
-    text-transform: uppercase;
-  }
-
-  .ebook a::after {
-    content: "Ver ebook";
-    font: 400 1rem/1.125 "Roboto", sans-serif;
-    line-height: 30px;
-    height: 30px;
-    text-transform: uppercase;
   }
 
   .detalhes-btn {
@@ -430,7 +403,7 @@
   }
 
   .h1-intro {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .p-intro {

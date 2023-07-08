@@ -14,11 +14,11 @@ export default function initDetalhesBtn() {
 
     const details = botao.nextElementSibling.innerHTML;
 
-    const txt = document.createElement("p");
-    txt.innerHTML = details;
-    txt.dataset.detalhes = "paragrafo";
-    txt.classList.add("font-p");
-    modalDetalhes.appendChild(txt);
+    const divDt = document.createElement("div");
+    divDt.innerHTML = details;
+    divDt.dataset.detalhes = "div";
+    divDt.classList.add("font-p", "div-detalhes-ativo");
+    modalDetalhes.appendChild(divDt);
     setTimeout(() => {
       modalContainer.classList.add("ativo");
     }, 300);

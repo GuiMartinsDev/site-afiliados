@@ -18,9 +18,9 @@
 .modal {
   background: white;
   max-width: 350px;
-  padding: 40px;
-  border: 10px solid var(--cor-primaria);
-  box-shadow: 0 0 0 10px white;
+  padding: 10px;
+  border: 5px solid var(--cor-primaria);
+  box-shadow: 0 0 0 5px white;
   position: relative;
 }
 
@@ -28,6 +28,23 @@
   width: 100%;
   height: auto;
   padding: 0.5rem;
+}
+
+.modal .div-detalhes-ativo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.modal .div-detalhes-ativo p {
+  font-size: 1.2rem;
+}
+
+.modal .div-detalhes-ativo a {
+  color: var(--cor-primaria);
+  text-decoration: underline;
 }
 
 .fechar {
@@ -61,5 +78,9 @@
     background: white;
     max-width: 250px;
     padding: 20px;
+  }
+
+  .modal .div-detalhes-ativo p {
+    font-size: 1rem;
   }
 }

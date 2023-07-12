@@ -2,6 +2,7 @@ import { btnHamburguer, menuMobile } from "./menu-hamburguer.js";
 
 export default function initScrollSuave() {
   const links = document.querySelectorAll("[data-links='menu']");
+  const eventsType = ["click", "touchstart"];
 
   function scrollToSection(event) {
     event.preventDefault();
@@ -20,8 +21,9 @@ export default function initScrollSuave() {
   }
 
   links.forEach((link) => {
-    link.addEventListener("click", scrollToSection);
-    link.addEventListener("touchstart", scrollToSection);
-    link.addEventListener("touchstart", removeMenu);
+    eventsType.forEach((eventType) => {
+      link.addEventListener(eventType, scrollToSection);
+      link.addEventListener(eventType, removeMenu);
+    });
   });
 }

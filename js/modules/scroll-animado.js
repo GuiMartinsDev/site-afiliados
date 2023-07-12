@@ -7,7 +7,7 @@ export default function initAnimacaoScroll() {
 
     function animaScroll() {
       const firstSectionTop = firstSection.getBoundingClientRect().top;
-      const headerSolid = firstSectionTop - 10 < 0;
+      const headerSolid = firstSectionTop - 30 < 0;
       if (headerSolid || window.innerWidth < 720) {
         header.classList.add("solid");
       } else {

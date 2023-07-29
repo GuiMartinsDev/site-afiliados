@@ -19,9 +19,7 @@ export default function initDetalhesBtn() {
     divDt.dataset.detalhes = "div";
     divDt.classList.add("font-p", "div-detalhes-ativo");
     modalDetalhes.appendChild(divDt);
-    setTimeout(() => {
-      modalContainer.classList.add("ativo");
-    }, 300);
+    modalContainer.classList.add("ativo");
   }
 
   function fecharDetalhes(event) {
